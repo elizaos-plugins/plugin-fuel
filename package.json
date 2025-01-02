@@ -17,5 +17,24 @@
   "peerDependencies": {
     "form-data": "4.0.1",
     "whatwg-url": "7.1.0"
+  },
+  "pluginType": "elizaos:plugin:1.0.0",
+  "pluginParameters": {
+      "type": "object",
+      "required": ["fuelPrivateKey", "fuelProviderUrl"],
+      "properties": {
+          "fuelPrivateKey": {
+              "type": "string",
+              "description": "Fuel Private Key"
+          },
+          "fuelProviderUrl": {
+              "type": "string",
+              "description": "Fuel Provider URL"
+          }
+      }
+  },
+  "pluginEnv": {
+      "FUEL_PRIVATE_KEY": "fuelPrivateKey",
+      "FUEL_PROVIDER_URL": "fuelProviderUrl"
   }
 }
