@@ -15,9 +15,7 @@
             }
         }
     },
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "dependencies": {
         "@elizaos/core": "workspace:*",
         "@types/lodash": "^4.17.14",
@@ -34,5 +32,20 @@
     "peerDependencies": {
         "form-data": "4.0.1",
         "whatwg-url": "7.1.0"
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "FUEL_PRIVATE_KEY": {
+                "type": "string",
+                "description": "Private key for the Fuel wallet starting with 0x"
+            },
+            "FUEL_PROVIDER_URL": {
+                "type": "string",
+                "optional": true,
+                "default": "https://mainnet.fuel.network/v1/graphql",
+                "description": "Custom RPC endpoint URL"
+            }
+        }
     }
 }
