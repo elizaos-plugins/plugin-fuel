@@ -96,7 +96,7 @@ var buildTransferDetails = async (state, runtime) => {
 var transferAction = {
   name: "transfer",
   description: "Transfer Fuel ETH between addresses on Fuel Ignition",
-  handler: async (runtime, message, state, options, callback) => {
+  handler: async (runtime, _message, state, _options, callback) => {
     const walletProvider = await initWalletProvider(runtime);
     const action = new TransferAction(walletProvider);
     const paramOptions = await buildTransferDetails(state, runtime);
